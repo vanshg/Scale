@@ -9,7 +9,6 @@ import com.vanshgandhi.scale.models.tasks.CategorizationTask;
 import com.vanshgandhi.scale.models.tasks.Task;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,8 +33,6 @@ public class ScaleTest {
 
     @Test
     public void createCategorization() throws InterruptedException, JSONException {
-        JSONObject test = new JSONObject();
-        test.put("hi", "bye");
         CategorizationTask categorizationTask = new CategorizationTask();
         categorizationTask.setInstruction("test")
                 .setCallbackUrl("http://van.sh")
@@ -44,8 +41,6 @@ public class ScaleTest {
                 .setAttachment("thing to categorize")
                 .setMetadata(new HashMap<String, Object>())
                 .setCategoryIds(new HashMap<String, String>());
-        categorizationTask.getMetadata().put("md1", test);
-        categorizationTask.getMetadata().put("md1", test);
         categorizationTask.getMetadata().put("array", new String[]{"a", "b", "c"});
         categorizationTask.getCategoryIds().put("key1", "value1");
         categorizationTask.getCategoryIds().put("key2", "value2");
@@ -56,7 +51,6 @@ public class ScaleTest {
             }
 
             @Override
-
             public void onError(Exception e) {
                 e.printStackTrace();
             }

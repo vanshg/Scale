@@ -1,5 +1,6 @@
 package com.vanshgandhi.scale.core;
 
+import android.support.annotation.Nullable;
 import android.util.Base64;
 
 import com.google.gson.FieldNamingPolicy;
@@ -63,35 +64,35 @@ public class Scale {
         return "Basic " + Base64.encodeToString(username.getBytes(), Base64.NO_WRAP);
     }
 
-    public static void getTask(String id, ScaleCallback<Task> callback) {
+    public static void getTask(String id, @Nullable ScaleCallback<Task> callback) {
         service.getTask(id).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void cancelTask(String id, ScaleCallback<Task> callback) {
+    public static void cancelTask(String id, @Nullable ScaleCallback<Task> callback) {
         service.cancelTask(id).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void getAllTasks(ScaleCallback<List<Task>> callback) {
+    public static void getAllTasks(@Nullable ScaleCallback<List<Task>> callback) {
         service.getAllTasks().enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void createCategorizationTask(CategorizationTask task, ScaleCallback<Task> callback) {
+    public static void createCategorizationTask(CategorizationTask task, @Nullable ScaleCallback<Task> callback) {
         service.createCategorizationTask(task).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void createTranscriptionTask(TranscriptionTask task, ScaleCallback<Task> callback) {
+    public static void createTranscriptionTask(TranscriptionTask task, @Nullable ScaleCallback<Task> callback) {
         service.createTranscriptionTask(task).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void createPhoneTask(PhoneCallTask task, ScaleCallback<Task> callback) {
+    public static void createPhoneTask(PhoneCallTask task, @Nullable ScaleCallback<Task> callback) {
         service.createPhoneTask(task).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void createComparisonTask(ComparisonTask task, ScaleCallback<Task> callback) {
+    public static void createComparisonTask(ComparisonTask task, @Nullable ScaleCallback<Task> callback) {
         service.createComparisonTask(task).enqueue(new RetrofitCallback<>(callback));
     }
 
-    public static void createAnnotationTask(AnnotationTask task, ScaleCallback<Task> callback) {
+    public static void createAnnotationTask(AnnotationTask task, @Nullable ScaleCallback<Task> callback) {
         service.createAnnotationTask(task).enqueue(new RetrofitCallback<>(callback));
     }
 }

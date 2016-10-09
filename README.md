@@ -7,7 +7,7 @@
 * Minimum Andorid SDK Level 15 or higher
 * Sign up for an [Scale Developer Account.](https://dashboard.scaleapi.com)
 
-## Setup
+## Usage
 
 Use with Gradle:
 
@@ -26,6 +26,65 @@ Initialize the SDK before you make your first request
 String apiKey = /*Your Scale API Key here*/;
 Scale.init(apiKey);
 ```
+
+###ScaleCallback
+You are required to pass a ScaleCallback to each request that you make (it is Nullable)
+
+```java
+ScaleCallback callback = new ScaleCallback<Task>() {
+    @Override
+    public void onSuccess(Task response) {
+        
+    }
+
+    @Override
+    public void onError(Exception e) {
+        
+    }
+}
+```
+
+#Examples
+All relevant methods are static methods inside the `Scale` class
+
+###Get Task By ID
+```java
+Scale.getTask(/*Task ID here*/, new ScaleCallback<Task>() {
+    @Override
+    public void onSuccess(Task response) {
+        
+    }
+
+    @Override
+    public void onError(Exception e) {
+		e.printStackTrace();
+    }
+});
+```
+###Create Categorization Task
+```java
+CategorizationTask categorizationTask = new CategorizationTask();
+categorizationTask.setInstruction("What does the text say?")
+        .setCallbackUrl("http://van.sh/callback")
+        .setAttachmentType(AttachmentType.text)
+        .setAttachment("Hi")
+        .setCategories(new String[]{"Bye", "Hi", "No"});
+Scale.createCategorizationTask(categorizationTask, new ScaleCallback<Task>() {
+	@Override
+	public void onSuccess(Task response) {
+	    
+	}
+	
+	@Override
+	public void onError(Exception e) {
+	    e.printStackTrace();
+	}
+});
+```
+
+All the other methods are documented in the source code
+
+All model classes utilize a pseudo-Builder method, where each setter returns the object itself, so you can chain setters
 
 #License
 Copyright 2016 Vansh Gandhi
