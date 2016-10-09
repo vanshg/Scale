@@ -1,7 +1,5 @@
 package com.vanshgandhi.scale;
 
-import com.vanshgandhi.scale.core.ScaleException;
-
 import java.io.IOException;
 
 import retrofit2.Call;
@@ -21,19 +19,17 @@ public class RetrofitCallback<T> implements Callback<T> {
 
     @Override
     public void onResponse(Call<T> call, retrofit2.Response<T> response) {
-        if (scaleCallback == null) {
-            return;
-        }
-        if (!response.isSuccessful()) {
-            try {
-                System.out.println(new String(response.errorBody().bytes()));
-            } catch (IOException e) {
-                e.printStackTrace();
+        if (scaleCallback != null) {
+            if (response.isSuccessful()) {
+                scaleCallback.onSuccess(response.body());
+            } else {
+                try {
+                    scaleCallback.onError(new Exception(new String(response.errorBody().bytes())));
+                } catch (IOException e) {
+                    scaleCallback.onError(e);
+                }
             }
-            scaleCallback.onError(ScaleException.fromCode(response.code()));
-            return;
         }
-        scaleCallback.onSuccess(response.body());
     }
 
     @Override

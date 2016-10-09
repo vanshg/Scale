@@ -7,10 +7,13 @@ import com.vanshgandhi.scale.tasks.AttachmentType;
 import com.vanshgandhi.scale.tasks.CategorizationTask;
 import com.vanshgandhi.scale.tasks.Task;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.HashMap;
 import java.util.List;
 
 import static junit.framework.Assert.assertNotNull;
@@ -22,11 +25,6 @@ import static junit.framework.Assert.assertNotNull;
  */
 @RunWith (AndroidJUnit4.class)
 public class ScaleTest {
-//    @Test
-//    public void useAppContext() throws Exception {
-//        // Context of the app under test.
-//        Context appContext = InstrumentationRegistry.getTargetContext();
-//    }
 
     @Before
     public void init() {
@@ -34,13 +32,22 @@ public class ScaleTest {
     }
 
     @Test
-    public void createCategorization() throws InterruptedException {
+    public void createCategorization() throws InterruptedException, JSONException {
+        JSONObject test = new JSONObject();
+        test.put("hi", "bye");
         CategorizationTask categorizationTask = new CategorizationTask();
-        categorizationTask.instruction = "test";
-        categorizationTask.callbackUrl = "http://van.sh";
-        categorizationTask.attachmentType = AttachmentType.text;
-        categorizationTask.attachment = "thing to categorize";
-        categorizationTask.categories = new String[]{"cat 1", "cat 2", "cat 3"};
+        categorizationTask.setInstruction("test")
+                .setCallbackUrl("http://van.sh")
+                .setAttachmentType(AttachmentType.text)
+                .setCategories(new String[]{"cat 1", "cat 2", "cat 3"})
+                .setAttachment("thing to categorize")
+                .setMetadata(new HashMap<String, Object>())
+                .setCategoryIds(new HashMap<String, String>());
+        categorizationTask.getMetadata().put("md1", test);
+        categorizationTask.getMetadata().put("md1", test);
+        categorizationTask.getMetadata().put("array", new String[]{"a", "b", "c"});
+        categorizationTask.getCategoryIds().put("key1", "value1");
+        categorizationTask.getCategoryIds().put("key2", "value2");
         Scale.createCategorizationTask(categorizationTask, new ScaleCallback<Task>() {
             @Override
             public void onSuccess(Task response) {
@@ -48,6 +55,7 @@ public class ScaleTest {
             }
 
             @Override
+
             public void onError(Exception e) {
                 e.printStackTrace();
             }
@@ -76,7 +84,7 @@ public class ScaleTest {
         Scale.getTask("57f9fc234b967c0600caddd8", new ScaleCallback<Task>() {
             @Override
             public void onSuccess(Task response) {
-                assertNotNull(response.taskId, response);
+                assertNotNull(response.getTaskId(), response);
             }
 
             @Override

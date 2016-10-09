@@ -9,7 +9,7 @@
         <option name="modules">
           <set>
             <option value="$USER_HOME$/Google Drive/Development/Scale" />
-            <option value="$USER_HOME$/Google Drive/Development/Scale/app" />
+            <option value="$USER_HOME$/Google Drive/Development/Scale/lib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
