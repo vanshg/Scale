@@ -10,4 +10,7 @@ android:
     - android-24
     - platform-tools
     - extra-android-support
-    - extra-android-m2repository
+    - extra-android-m2repository 
+branches:
+  except:
+    - master
