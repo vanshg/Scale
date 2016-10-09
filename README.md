@@ -1,6 +1,5 @@
 #Scale SDK for Android
-
-[![Bintray](https://img.shields.io/bintray/v/vanshg/maven/com.vanshgandhi.scale.svg)](http://jcenter.bintray.com/com/vanshgandhi/scale/scale/)
+[ ![Download](https://api.bintray.com/packages/vanshg/maven/Scale/images/download.svg) ](https://bintray.com/vanshg/maven/Scale/_latestVersion)
 [![license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/vanshg/Scale/blob/master/LICENSE)
 
 ##Requirements
