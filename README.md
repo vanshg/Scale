@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/vanshg/Scale/blob/master/LICENSE)
 
 ##Requirements
-* Minimum Andorid SDK Level 15 or higher
+* Minimum Andorid SDK Level 8 or higher
 * Sign up for an [Scale Developer Account.](https://dashboard.scaleapi.com)
 
 ## Usage
@@ -15,6 +15,14 @@ Use with Gradle:
 dependencies {
 	compile 'com.vanshgandhi.scale:scale:1.0.0'
 }
+```
+or Maven:
+```xml
+<dependency>
+  <groupId>com.vanshgandhi.scale</groupId>
+  <artifactId>scale</artifactId>
+  <version>1.0.0</version>
+</dependency>
 ```
 
 

@@ -4,8 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application
-        android:label="@string/scale_name">
+    <application>
     </application>
 
 </manifest>

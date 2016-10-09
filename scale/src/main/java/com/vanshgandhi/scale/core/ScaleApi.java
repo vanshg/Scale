@@ -20,7 +20,7 @@ import retrofit2.http.Path;
  * Copyright © 2016
  */
 
-interface ScaleService {
+interface ScaleApi {
     @GET("task/{id}")
     Call<Task> getTask(@Path("id") String id);
 

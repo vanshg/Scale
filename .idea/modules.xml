@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/Google Drive/Development/Scale/Scale.iml" filepath="$USER_HOME$/Google Drive/Development/Scale/Scale.iml" />
-      <module fileurl="file://$USER_HOME$/Google Drive/Development/Scale/lib/lib.iml" filepath="$USER_HOME$/Google Drive/Development/Scale/lib/lib.iml" />
+      <module fileurl="file://$USER_HOME$/Google Drive/Development/Scale/scale/scale.iml" filepath="$USER_HOME$/Google Drive/Development/Scale/scale/scale.iml" />
     </modules>
   </component>
 </project>

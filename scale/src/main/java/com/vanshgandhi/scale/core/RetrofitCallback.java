@@ -11,11 +11,10 @@ import retrofit2.Callback;
  * Created by Vansh Gandhi on 10/9/16.
  * Copyright © 2016
  */
-
-public class RetrofitCallback<T> implements Callback<T> {
+class RetrofitCallback<T> implements Callback<T> {
     private ScaleCallback<T> scaleCallback;
 
-    public RetrofitCallback(ScaleCallback<T> scaleCallback) {
+    RetrofitCallback(ScaleCallback<T> scaleCallback) {
         this.scaleCallback = scaleCallback;
     }
 
@@ -26,9 +25,9 @@ public class RetrofitCallback<T> implements Callback<T> {
                 scaleCallback.onSuccess(response.body());
             } else {
                 try {
-                    scaleCallback.onError(new Exception(new String(response.errorBody().bytes())));
+                    scaleCallback.onError(new Exception(new String(response.errorBody().bytes()))); //Set the error body as the error message and invoke the onError callback
                 } catch (IOException e) {
-                    scaleCallback.onError(e);
+                    scaleCallback.onError(e); //Error reading the error body
                 }
             }
         }
