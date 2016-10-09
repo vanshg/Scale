@@ -1,0 +1,11 @@
+<manifest
+    package="com.vanshgandhi.scale"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="@string/scale_name">
+    </application>
+
+</manifest>
