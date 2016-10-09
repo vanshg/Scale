@@ -1,4 +1,6 @@
-package com.vanshgandhi.scale;
+package com.vanshgandhi.scale.core;
+
+import com.vanshgandhi.scale.models.ScaleCallback;
 
 import java.io.IOException;
 

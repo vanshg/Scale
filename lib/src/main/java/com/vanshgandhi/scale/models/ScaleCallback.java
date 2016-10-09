@@ -1,4 +1,4 @@
-package com.vanshgandhi.scale;
+package com.vanshgandhi.scale.models;
 
 /**
  * Created by Vansh Gandhi on 10/9/16.

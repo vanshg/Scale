@@ -1,11 +1,11 @@
 package com.vanshgandhi.scale.core;
 
-import com.vanshgandhi.scale.tasks.AnnotationTask;
-import com.vanshgandhi.scale.tasks.CategorizationTask;
-import com.vanshgandhi.scale.tasks.ComparisonTask;
-import com.vanshgandhi.scale.tasks.PhoneCallTask;
-import com.vanshgandhi.scale.tasks.Task;
-import com.vanshgandhi.scale.tasks.TranscriptionTask;
+import com.vanshgandhi.scale.models.tasks.AnnotationTask;
+import com.vanshgandhi.scale.models.tasks.CategorizationTask;
+import com.vanshgandhi.scale.models.tasks.ComparisonTask;
+import com.vanshgandhi.scale.models.tasks.PhoneCallTask;
+import com.vanshgandhi.scale.models.tasks.Task;
+import com.vanshgandhi.scale.models.tasks.TranscriptionTask;
 
 import java.util.List;
 

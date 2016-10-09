@@ -1,8 +1,8 @@
-package com.vanshgandhi.scale.tasks;
+package com.vanshgandhi.scale.models.tasks;
 
-import com.vanshgandhi.scale.Status;
-import com.vanshgandhi.scale.TaskType;
-import com.vanshgandhi.scale.Urgency;
+import com.vanshgandhi.scale.models.Status;
+import com.vanshgandhi.scale.models.TaskType;
+import com.vanshgandhi.scale.models.Urgency;
 
 import java.util.Date;
 import java.util.Map;

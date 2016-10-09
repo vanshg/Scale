@@ -3,9 +3,10 @@ package com.vanshgandhi.scale;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.vanshgandhi.scale.core.Scale;
-import com.vanshgandhi.scale.tasks.AttachmentType;
-import com.vanshgandhi.scale.tasks.CategorizationTask;
-import com.vanshgandhi.scale.tasks.Task;
+import com.vanshgandhi.scale.models.ScaleCallback;
+import com.vanshgandhi.scale.models.tasks.AttachmentType;
+import com.vanshgandhi.scale.models.tasks.CategorizationTask;
+import com.vanshgandhi.scale.models.tasks.Task;
 
 import org.json.JSONException;
 import org.json.JSONObject;

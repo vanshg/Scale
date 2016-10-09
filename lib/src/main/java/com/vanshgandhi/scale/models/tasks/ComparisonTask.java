@@ -1,6 +1,6 @@
-package com.vanshgandhi.scale.tasks;
+package com.vanshgandhi.scale.models.tasks;
 
-import com.vanshgandhi.scale.Urgency;
+import com.vanshgandhi.scale.models.Urgency;
 
 import java.util.Map;
 
