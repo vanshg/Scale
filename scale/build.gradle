@@ -21,9 +21,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-        buildTypes.each {
+        debug {
             it.buildConfigField 'String', 'SCALE_API_KEY', scale_api_key
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -44,7 +48,7 @@ dependencies {
 }
 
 def siteUrl = 'http://van.sh'
-def projectName = 'com.vanshgandi.scale'
+def projectName = 'Scale'
 def gitUrl = 'https://github.com/vanshg/Scale'
 
 bintray {
@@ -56,7 +60,7 @@ bintray {
         version libVersion
         name = projectName
         desc = 'Android SDK for the Scale API'
-        licenses = ['Apache 2.0']
+        licenses = ['Apache-2.0']
         labels = ['android', 'scale', 'sdk']
         vcsUrl = gitUrl
     }
