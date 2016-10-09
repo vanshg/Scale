@@ -1,6 +1,6 @@
 package com.vanshgandhi.scale;
 
-public class ScaleTest {
+public class UnitTest {
 
 
 }
