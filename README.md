@@ -2,6 +2,7 @@
 [ ![Download](https://api.bintray.com/packages/vanshg/maven/Scale/images/download.svg) ](https://bintray.com/vanshg/maven/Scale/_latestVersion)
 [![license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/vanshg/Scale/blob/master/LICENSE)
 ![API](https://img.shields.io/badge/API-8%2B-blue.svg?style=flat)
+[![API Testing](https://img.shields.io/badge/API%20Test-RapidAPI-blue.svg)](https://rapidapi.com/package/AudioTranscription/functions?utm_source=ScaleGithub&utm_medium=button&utm_content=Vender_GitHub)
 
 ##Requirements
 * Minimum Andorid SDK Level 8 or higher
